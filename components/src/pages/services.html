@@ -1,0 +1,104 @@
+<div id="header"></div>
+
+<style>
+  .hero-section {
+    background-image: url('./images/photo1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+  }
+
+  .sh{
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 8px; /* Optional: for rounded corners */
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .hero-section p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    color: #007bff;
+  }
+</style>
+
+<section class="hero-section text-center py-5">
+  <div class="container sh">
+    <h1>Our Services</h1>
+    <p>Explore the exceptional services we offer to enhance your travel experience</p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="service-icon mb-3">
+          <i class="bi bi-airplane-engines"></i>
+        </div>
+        <h3>Comfortable Flights</h3>
+        <p>Enjoy a comfortable and relaxing flight with our state-of-the-art aircraft and premium seating options.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="service-icon mb-3">
+          <i class="bi bi-people"></i>
+        </div>
+        <h3>Exceptional Service</h3>
+        <p>Our friendly and professional staff are dedicated to providing you with exceptional service throughout your journey.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="service-icon mb-3">
+          <i class="bi bi-bag-check"></i>
+        </div>
+        <h3>Flexible Baggage Policies</h3>
+        <p>Take advantage of our flexible baggage policies, including generous allowances and easy check-in options.</p>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="service-icon mb-3">
+          <i class="bi bi-wifi"></i>
+        </div>
+        <h3>In-Flight Entertainment</h3>
+        <p>Stay entertained with our wide selection of movies, TV shows, and music, all available on your personal screen.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="service-icon mb-3">
+          <i class="bi bi-cup-straw"></i>
+        </div>
+        <h3>Gourmet Dining</h3>
+        <p>Indulge in gourmet meals and premium beverages, crafted to ensure a delightful dining experience at 30,000 feet.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="service-icon mb-3">
+          <i class="bi bi-gear"></i>
+        </div>
+        <h3>Personalized Services</h3>
+        <p>Experience personalized services tailored to your preferences, including special assistance and customized travel options.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+    function loadHTML(url, elementId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => document.getElementById(elementId).innerHTML = data)
+        .catch(error => console.error('Error loading HTML:', error));
+    }
+    loadHTML('header.html', 'header');
+    loadHTML('footer.html', 'footer');
+  </script>

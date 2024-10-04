@@ -1,0 +1,119 @@
+<div id="header"></div>
+
+<style>
+    .hero-section {
+      background-image: url('./images/photo1.jpg');
+      background-size: cover;
+      background-position: center;
+      color: black;
+      padding: 100px 0;
+    }
+    .sh {
+      background: rgba(0, 0, 0, 0.5); 
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-section p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .booking-container {
+      background-color: #f8f9fa;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: auto;
+      margin-top: -100px; /* Move container up into the hero section */
+      position: relative;
+      z-index: 1;
+    }
+
+    .booking-button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2rem;
+    }
+  </style>
+
+<section class="hero-section text-center">
+    <div class="container sh">
+      <h1>Book Your Flight</h1>
+      <p>Plan your next journey with Aerosaka. Find the best flights and book your tickets now.</p>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="booking-container">
+        <h2 class="text-center mb-4">Flight Booking</h2>
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="departure" class="form-label">Departure</label>
+              <input type="text" class="form-control" id="departure" placeholder="City or Airport" required>
+            </div>
+            <div class="col-md-6">
+              <label for="destination" class="form-label">Destination</label>
+              <input type="text" class="form-control" id="destination" placeholder="City or Airport" required>
+            </div>
+          </div>
+          <div class="row g-3 mt-3">
+            <div class="col-md-6">
+              <label for="departure-date" class="form-label">Departure Date</label>
+              <input type="date" class="form-control" id="departure-date" required>
+            </div>
+            <div class="col-md-6">
+              <label for="return-date" class="form-label">Return Date</label>
+              <input type="date" class="form-control" id="return-date">
+            </div>
+          </div>
+          <div class="row g-3 mt-3">
+            <div class="col-md-4">
+              <label for="adults" class="form-label">Adults (18+)</label>
+              <input type="number" class="form-control" id="adults" min="1" max="10" value="1" required>
+            </div>
+            <div class="col-md-4">
+              <label for="children" class="form-label">Children (0-17)</label>
+              <input type="number" class="form-control" id="children" min="0" max="10" value="0">
+            </div>
+            <div class="col-md-4">
+              <label for="class" class="form-label">Class</label>
+              <select class="form-select" id="class" required>
+                <option selected>Economy</option>
+                <option>Premium Economy</option>
+                <option>Business</option>
+                <option>First Class</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-4">
+            <button type="submit" class="btn btn-primary booking-button">Search Flights</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+<div id="footer"></div>
+
+<script>
+    function loadHTML(url, elementId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => document.getElementById(elementId).innerHTML = data)
+        .catch(error => console.error('Error loading HTML:', error));
+    }
+
+    loadHTML('header.html', 'header');
+    loadHTML('footer.html', 'footer');
+  </script>

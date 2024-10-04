@@ -1,0 +1,110 @@
+<style>
+#first-class {
+    padding: 60px 0;
+  }
+  
+  .hero-section {
+    background: url('luxury-background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 0;
+    color: white;
+  }
+  .contact-info {
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+  }
+  .benefits .card {
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .benefits .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .comparison-table {
+    margin-top: 40px;
+  }
+  
+  .cta {
+    background: #f5f5f5;
+    padding: 40px 0;
+    margin-top: 50px;
+  }
+  .background-section {
+    background: url('./images/photo1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+  }
+  
+</style>
+
+<div id="header"></div>
+
+<section id="first-class" class="background-section">
+    <div class="contact-info text-center">
+      <h1>Explore First Class with Aerosaka</h1>
+      <p>Your exclusive gateway to premium features and services.</p>
+    </div>
+    
+    <div class="container benefits">
+      <h2>Why Choose First Class?</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./images/style.jpg" alt="Priority Support" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Priority Support</h5>
+              <p>Get 24/7 dedicated support from our best agents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container comparison-table">
+      <h2 class="contact-info">First Class vs. Standard</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">First Class</th>
+            <th scope="col">Standard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Support</td>
+            <td>Priority 24/7 Support</td>
+            <td>Standard Support</td>
+          </tr>
+          <tr>
+            <td>Exclusive Offers</td>
+            <td>Yes</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="cta text-center">
+      <h2>Ready for the First Class Experience?</h2>
+      <a href="#" class="btn btn-primary">Upgrade Now</a>
+    </div>
+  </section>
+<div id="footer"></div>  
+
+<script>
+    function loadHTML(url, elementId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => document.getElementById(elementId).innerHTML = data)
+        .catch(error => console.error('Error loading HTML:', error));
+    }
+
+    // Load header and footer
+    loadHTML('header.html', 'header');
+    loadHTML('footer.html', 'footer');
+</script>  

@@ -114,14 +114,18 @@ p,font{
     font-family: 'Playfair Display', serif;
 }
 h1,h2,h3,h4,h5,h6{
-    text-shadow: 2px 2px grey;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 .abc{
-    text-shadow: 1px 1px grey;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size:20px;
-    font-weight: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;  
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings:
+    "wdth" 81.8;
 
 }
 .ab2{
@@ -132,3 +136,28 @@ h1,h2,h3,h4,h5,h6{
 img{
     box-shadow: 6px 6px black;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+  
+
+.hero-section {
+    background-color: rgb(170, 169, 169);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+  }
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }

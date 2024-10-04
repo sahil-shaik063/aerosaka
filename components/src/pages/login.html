@@ -1,0 +1,91 @@
+<div id="header"></div>
+
+<style>
+  .hero-section {
+    background-image: url('./images/photo1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+  }
+  .sh{
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .hero-section p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .signin-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color:#f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .signin-button {
+    width: 100%;
+  }
+</style>
+
+<section class="hero-section text-center">
+  <div class="container sh">
+    <h1>Sign In</h1>
+    <p>Access your Aerosaka account to manage your bookings and more</p>
+  </div>
+</section>
+
+<!-- Sign In Form Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="signin-container">
+      <h2 class="text-center mb-4">Sign In</h2>
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="@example.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary signin-button">Sign In</button>
+        <div class="mt-3 text-center">
+          <a href="#">Forgot your password?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<div id="footer"></div>
+
+<script>
+    // Function to load external HTML into a specific div
+    function loadHTML(url, elementId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => document.getElementById(elementId).innerHTML = data)
+        .catch(error => console.error('Error loading HTML:', error));
+    }
+
+    // Load header and footer
+    loadHTML('header.html', 'header');
+    loadHTML('footer.html', 'footer');
+  </script>

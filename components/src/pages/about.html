@@ -1,0 +1,110 @@
+<div id="header"></div>
+
+<style>
+  .background-section {
+    background-image: url('./images/photo1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Text color for contrast */
+    padding: 100px 0; /* Adjust as needed */
+  }
+  .background-section .content {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 8px; /* Optional: for rounded corners */
+  }
+  .sahil{
+     font-size: 50px;
+  }
+</style>
+
+<section id="body">
+ 
+  <section class="hero-section text-center">
+    <div class="container py-5">
+      <h1 class="sahil">Welcome to Aerosaka</h1>
+      <p class="sahil">Your journey begins here</p>
+    </div>
+  </section>
+
+  <section class="background-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="content">
+            <h2>Our Story</h2>
+            <p>
+              Established in 2024, Aerosaka is dedicated to providing world-class air travel experiences. 
+              With a focus on innovation, comfort, and customer satisfaction, we have grown into one of the most respected airlines in the world.
+            </p>
+            <p>
+              From our humble beginnings, Aerosaka has expanded its services to over 150 destinations across the globe, offering unparalleled connectivity and convenience to our passengers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>Our Mission</h2>
+        <p>To elevate the standards of global air travel and connect people, cultures, and economies in a way that is seamless, sustainable, and enriching.</p>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h3>Innovation</h3>
+          <p>We continuously invest in cutting-edge technology to enhance the travel experience, from state-of-the-art aircraft to user-friendly digital platforms.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Comfort</h3>
+          <p>Our fleet is equipped with the latest amenities to ensure a comfortable and enjoyable journey, whether you're flying for business or leisure.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Customer Satisfaction</h3>
+          <p>Your satisfaction is our priority. We strive to exceed your expectations with exceptional service, on-time performance, and a commitment to safety.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>Our Values</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Excellence</h4>
+          <p>We pursue excellence in every aspect of our operations, from the quality of our service to the safety and reliability of our flights.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Integrity</h4>
+          <p>We operate with the highest level of integrity, ensuring transparency, honesty, and accountability in all our dealings.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Sustainability</h4>
+          <p>We are committed to sustainable practices that minimize our environmental impact and contribute to a better future for all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<div id="footer"></div>
+
+<script>
+    function loadHTML(url, elementId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => document.getElementById(elementId).innerHTML = data)
+        .catch(error => console.error('Error loading HTML:', error));
+    }
+
+    loadHTML('header.html', 'header');
+    loadHTML('footer.html', 'footer');
+  </script>
